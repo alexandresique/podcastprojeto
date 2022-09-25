@@ -1,0 +1,123 @@
+body {
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    margin-right: 0%;
+
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2e2e2e;
+    background-color: whitesmoke;
+    height: 200vh;
+}
+
+
+/*Cabeçalho*/
+header {
+    background-color: white;
+    height: 115px;
+    width: 100%;
+    border-bottom: solid grey 2px;
+}
+
+.logo {
+    padding: 10px;
+    width: 150px;
+    line-height: 80px;
+    margin-left: 20px;
+}
+
+.fechanav {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar {
+    list-style: none;
+    float: right;
+    margin: 20px;
+    text-decoration: none;
+}
+
+.navbar li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+.navbar li a {
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    color: #2e2e2e;
+}
+
+.navbar li a:hover {
+    text-decoration: underline;
+    transition: .5s;
+}
+
+.icone-hamburgue {
+    width: 30px;
+    float: right;
+    line-height: 80px;
+    margin: 20px;
+    cursor: pointer;
+    margin-top: 6vh;
+}
+.icone-hamburgue:hover{
+        border-radius: 5px;
+        box-shadow: 0px 1px 5px #2e2e2e;
+}
+#check {
+    display: none;
+}
+
+@media (min-width: 858px) {
+    .icone-hamburgue {
+        display: none;
+    }
+
+    .fechanav {
+        display: none;
+    }
+}
+
+@media (max-width: 858px) {
+    .logo {
+        width: 150px;
+        line-height: 80px;
+        margin-left: 20px;
+    }
+
+    .navbar {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: whitesmoke;
+        top: 115px;
+        right: -100%;
+        text-align: center;
+        transition: all .5s;
+        border-top: solid grey 2px;
+        margin: 0;
+    }
+
+    .navbar li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    .navbar li a {
+        font-size: 20px;
+    }
+
+    #check:checked~.navbar {
+        right: 0;
+    }
+}
+
+/*fim do cabeçalho*/
