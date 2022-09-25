@@ -13,6 +13,10 @@
     <!-- arquivos de estilos externos -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="iframestily.css">
+
+    <!-- script jquery aqui em baixo -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="animacaoscroll.js"></script>
 </head>
 
 <body>
@@ -37,7 +41,6 @@
     <!-- Seção a baixo contem as informações das lives e os iframe -->
 
     <section>
-
         <div class="liveiframe">
         <!--area do iframe em video-->
             <h4 class="aovivo">Ao vivo</h4>
@@ -45,6 +48,7 @@
             <iframe src="https://www.facebook.com/plugins/video.php?height=420&href=https%3A%2F%2Fwww.facebook.com%2Fizael.flyper%2Fvideos%2F779310790005275%2F&show_text=true&width=560&t=0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
             <p class="descricao">No podcast de hoje estamos trazendo um candidato a deputado estadual, e iremos falar tudo com vocês.</p>
             
+            <!-- área de apoiadores do conteiner iframe -->
             <h4>Apoiadores</h4>
             <div class="patrocinadores">
                 <img src="pt01.jpg" alt=""><img src="pt06.jpg" alt="">
@@ -56,8 +60,51 @@
 
             <p class="aviso">Acesse a <span>Live</span> na página oficial do facebook: <a href="https://www.facebook.com/100057106360142/videos/779310790005275/" target="_blank">Clique aqui</a></p>
         </div>
-
     </section>
+
+    <section class="section-anteriores">
+
+        <!-- titulo da seção -->
+        <h4 class="titulosectionanteriores">Veja mais</h4>
+
+        <!-- Local dos conteiner dos videos anteriores -->
+        <div class="iframeanteriores">
+
+            <div class="conteiner-anterios mostrar">
+                <iframe src="https://www.facebook.com/plugins/video.php?height=420&href=https%3A%2F%2Fwww.facebook.com%2Fizael.flyper%2Fvideos%2F5360523293985198%2F&show_text=true&width=560&t=0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                <p>Postado 14/09/2022 - 22:30</p>
+            </div>
+
+            <div class="conteiner-anterios mostrar">
+                <iframe src="https://www.facebook.com/plugins/video.php?height=420&href=https%3A%2F%2Fwww.facebook.com%2Fizael.flyper%2Fvideos%2F5360523293985198%2F&show_text=true&width=560&t=0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                <p>Postado 14/09/2022 - 22:30</p>
+            </div>
+
+            <div class="conteiner-anterios mostrar">
+                <iframe src="https://www.facebook.com/plugins/video.php?height=420&href=https%3A%2F%2Fwww.facebook.com%2Fizael.flyper%2Fvideos%2F5360523293985198%2F&show_text=true&width=560&t=0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                <p>Postado 14/09/2022 - 22:30</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        $(window).on("load scroll", function(){
+    var threshold = 30; // porcentagem da altura visível do elemento que aparecer na tela para iniciar a animação
+     $(".mostrar").each(function(){
+         var el = $(this);
+         var eleHeight = el.outerHeight(); // altura da div
+         var eleTopo = el.offset().top; // distancia da div ao topo do documento
+         var scrlTopo = $(window).scrollTop(); // quanto foi rolada a janela
+         var distance = eleTopo-scrlTopo; // distancia da div ao topo da janela
+         var altJanela = window.innerHeight; // altura da janela
+         if(distance <= altJanela-(eleHeight/(threshold/10))) {
+             el.animate({ 'opacity': 1 }, 2000); // 1200 = 1,2 segundo da animação. Quanto menor, mais rápido
+         }
+     });
+ });
+    </script>
+
 </body>
 
 </html>
