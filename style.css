@@ -8,10 +8,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #2e2e2e;
     background-color: whitesmoke;
-    height: 200vh;
+    height: 500vh;
 }
 
-
+.mostrar{
+    opacity: 0;
+}
 /*Cabeçalho*/
 header {
     background-color: white;
