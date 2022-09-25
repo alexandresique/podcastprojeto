@@ -12,7 +12,7 @@
 /* configurações de largura do iframe ao vivo */
 .liveiframe iframe{
     width: 300px; 
-    height: 200px;
+    height: 300px;
     border-radius: 5px;
 }
 .aovivo{
@@ -59,4 +59,36 @@
 .aviso a{
     text-decoration: none;
     color: rgb(33, 33, 252);
+}
+
+/* estilo da area do podcast anteriores */
+.section-anteriores{
+    margin-top: 100px;
+}
+.titulosectionanteriores{
+    text-align: center;
+}
+.iframeanteriores{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.conteiner-anterios{
+    border-bottom: 1px solid grey;
+}
+.conteiner-anterios iframe{
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+}
+.conteiner-anterios p{
+    font-size: 12px;
+    text-align: center;
+}
+@media (max-width: 858px){
+    .iframeanteriores{
+        gap: 40px;
+    }
 }
