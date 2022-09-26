@@ -67,6 +67,7 @@
 }
 .titulosectionanteriores{
     text-align: center;
+    margin-bottom: 40px;
 }
 .iframeanteriores{
     display: flex;
@@ -89,6 +90,23 @@
 }
 @media (max-width: 858px){
     .iframeanteriores{
-        gap: 40px;
+        display: block;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .conteiner-anterios iframe{
+        width: 300px;
+        height: 200px;
+        border-radius: 5px;
+    }
+    .liveiframe iframe{
+        width: 300px; 
+        height: 200px;
+        border-radius: 5px;
+    }
+    .conteiner-anterios{
+        border-bottom: 1px solid grey;
+        margin-bottom: 40px
     }
 }
