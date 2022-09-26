@@ -123,3 +123,23 @@ header {
 }
 
 /*fim do cabeçalho*/
+
+/* area de estilo dos apoiadores oficiais no topo da pagina inicial */
+.apoiadores{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.apoiadores img{
+    width: 100px;
+    height: 50px;
+}
+@media (max-width: 858px){
+    .apoiadores img{
+        width: 75px;
+        height: 37px;
+    }
+}
